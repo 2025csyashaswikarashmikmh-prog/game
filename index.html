@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game">
+    <h1>Rock Paper Scissors</h1>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div class="score score--player">
+        <span class="score__label">You</span>
+        <span class="score__value" id="player-score">0</span>
+      </div>
+      <div class="score score--draw">
+        <span class="score__label">Draws</span>
+        <span class="score__value" id="draw-score">0</span>
+      </div>
+      <div class="score score--computer">
+        <span class="score__label">Computer</span>
+        <span class="score__value" id="computer-score">0</span>
+      </div>
+    </section>
+
+    <section class="arena" aria-label="Current round">
+      <div class="hand" id="player-hand">?</div>
+      <span class="vs">vs</span>
+      <div class="hand" id="computer-hand">?</div>
+    </section>
+
+    <p class="result" id="result" aria-live="polite">Pick your move</p>
+
+    <section class="choices" aria-label="Choose your move">
+      <button class="choice" data-choice="rock">
+        <span class="choice__icon">✊</span>
+        <span class="choice__name">Rock</span>
+      </button>
+      <button class="choice" data-choice="paper">
+        <span class="choice__icon">✋</span>
+        <span class="choice__name">Paper</span>
+      </button>
+      <button class="choice" data-choice="scissors">
+        <span class="choice__icon">✌️</span>
+        <span class="choice__name">Scissors</span>
+      </button>
+    </section>
+
+    <p class="hint">Tip: press R, P or S on your keyboard</p>
+    <button class="reset" id="reset">Reset score</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
